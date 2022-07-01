@@ -51,61 +51,62 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
+- Vanilla Javascript
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+-
 
 
 
 ### What I learned
+I learnt more about javascript functions like how to use  parameters
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+
+.form-input-fields.error{
+   
+    border:1px solid var(--background-color);
+
+  }
+
+.form-input-fields.success {
+    border: 1px solid rgb(56, 193, 56);
+
+ /* i learnt about how to use pseudoclasses. like the success and error classes which would be applied one there is an error or success suing js */
 }
+
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const setErrorFor = (element , message ) => {
+    const forminputfields = element.parentElement ;
+    const small = forminputfields.querySelector("small");
+    forminputfields.className = 'form-input-fields error';
+    small.innerText = message;
+
+    // this function sets and error message and changes the color of input border once there is incorrect input 
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+```js
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+    if (firstName === '' || firstName === null  || firstName === 'karey') {
+        setErrorFor(firstNameInput, 'first-name field cannot be empty' )
 
-### Continued development
+        // I learnt than i can castom write an error message in the function parameter.
+        // i can also use variables as function parameter like this setErrorFor(firstNameInput).
+    }
+```
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
+## Continued development
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+In the future i would like to store the error messages in an array. 
+i would like to add more features such as when the use submits the form it shows a congartulation card  
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@kareynjeri](https://www.frontendmentor.io/profile/kareynjeri)
+- Twitter - [kareynjeri1](https://www.twitter.com/Kareynjeri1)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

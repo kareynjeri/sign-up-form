@@ -3,7 +3,7 @@ const form = document.getElementById("form");
 const firstNameInput = document.getElementById("fname");
 const lastNameInput = document.getElementById("lname");
 const userEmail = document.getElementById("email");
-const userPassword = document.getElementById("pass")
+const userPassword = document.getElementById("pass");
 
 
 //prevent default 
@@ -60,23 +60,18 @@ function checkInputs() {
 
 }
 
-
 //setting error message 
 
-const setErrorFor = (input , message ) => {
-    const forminputfields = input.parentElement ;
+const setErrorFor = (element , message ) => {
+    const forminputfields = element.parentElement ;
     const small = forminputfields.querySelector("small");
     forminputfields.className = 'form-input-fields error';
-   small.innerText = message;
-
-
+    small.innerText = message;
 }
 
 function setSuccessFor(input) {
     const forminputfields = input.parentElement;
     forminputfields.className = 'form-input-fields success'
-
-
 }
 
 function isEmail(email) {
